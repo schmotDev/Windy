@@ -1,22 +1,18 @@
-# final project for CS50
+# final project for CS50 Python
 # Author: Jerome Schmutz
-# start Date: 30/12/2023
 
 import requests
 
-parameters = {'key': 'ewghalzgdltowqhen8pwx0nv9b3oh37aloeo7icj',
-              'place_id': 'london'}
-
 api_key = "ewghalzgdltowqhen8pwx0nv9b3oh37aloeo7icj"
 
-url_base = "https://www.meteosource.com/api/v1/free/point"
+url_base = "https://www.meteosource.com/api/v1/free"
 
 
-# this function return the list of available locations
-#  (not available with free API key )
-def get_list_location():
+# this function return a list of 10 available locations based on a simple string
+def get_list_location(text):
     url = url_base + "/find_places"
-    parameters = {'key': api_key}
+    parameters = {'key': api_key,
+                  'text' : text}
     try:
         data = requests.get(url, parameters).json()
     except:
@@ -25,14 +21,14 @@ def get_list_location():
         return data
 
 
-# this function returns the data for a specific location in parameter
-def get_data(location):
-    url = url_base
+# this function returns the daily forecast for a specific location in parameter
+def get_week_data(location):
+    location = location.replace(" ", "-")
+    url = url_base + "/point"
     parameters = {'key': api_key,
                   'place_id': location,
                   'sections': 'daily',
                   'units': 'metric'}
-    
     try:
         data = requests.get(url, parameters).json()
     except:
@@ -40,5 +36,17 @@ def get_data(location):
     else:
         return data
 
-
-
+# this function returns the hourly forecast for a specific location in parameter
+def get_day_data(location):
+    location = location.replace(" ", "-")
+    url = url_base + "/point"
+    parameters = {'key': api_key,
+                  'place_id': location,
+                  'sections': 'hourly',
+                  'units': 'metric'}
+    try:
+        data = requests.get(url, parameters).json()
+    except:
+        pass
+    else:
+        return data
