@@ -31,8 +31,8 @@ To run this app, you need to copy
   This is the main file, it builds the GUI elements with their functions. It also contains some fonctions for metrics conversation.
     
 * **weatherApi.py**  
-  This file contains the functions that will connect tot he API and retrieve data.
-  In this first version it is quite simple, but in future versions we could add many other features to get different set of data.
+  This file contains the functions that connects to the API and retrieve data.
+  I'm using a different file so it will be easier to use a different API.
 
 You can also check if you have the needed python packages already installed with the `requirements.txt`  
 ```
