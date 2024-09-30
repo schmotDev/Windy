@@ -1,6 +1,7 @@
 # The Kitesurfing planner app
 
 A basic weather forecast application
+<br><br>
 
 ## General Info
 
@@ -14,7 +15,12 @@ You can change the metrics in the left menu.
 For temperatures you can choose between Celsius or Farenheit.
 For the wind metrics, you can select meter/s, feet/s, miles/h or knots.
 
+<br><br>
+## Video Demo
+
+https://youtu.be/M48Ikjm1Z7k  
     
+<br><br>
 
 ## Technologies
 
@@ -22,6 +28,7 @@ Python with TKinter for the GUI
 I'm using the API of MeteoSource https://www.meteosource.com/
 
     
+<br><br>
 
 
 ## Setup
@@ -43,6 +50,7 @@ $ pip3 install -r requirements.txt
 $ python3 project.py
 ```
 
+<br><br>
 
 ## Demo
 
