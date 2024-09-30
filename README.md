@@ -1,4 +1,4 @@
-# Windy.py - the Kitesurfing planner app
+# The Kitesurfing planner app
 
 A basic weather forecast application
 
