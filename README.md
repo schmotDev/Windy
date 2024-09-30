@@ -36,6 +36,8 @@ To run this app, you need to copy
 
 You can also check if you have the needed python packages already installed with the `requirements.txt`  
 ```
+$ git clone https://github.com/schmotDev/Windy.git
+$ cd Windy
 $ pip3 install -r requirements.txt
 $ python3 project.py
 ```
