@@ -26,9 +26,13 @@ I'm using the API of MeteoSource https://www.meteosource.com/
 
 ## Setup
 
-To run this app, you need to copy 
-* project.py
-* weatherApi.py
+To run this app, you need to copy   
+* **project.py**  
+  This is the main file, it builds the GUI elements with their functions. It also contains some fonctions for metrics conversation.
+    
+* **weatherApi.py**  
+  This file contains the functions that will connect tot he API and retrieve data.
+  In this first version it is quite simple, but in future versions we could add many other features to get different set of data.
 
 You can also check if you have the needed python packages already installed with the `requirements.txt`  
 ```
